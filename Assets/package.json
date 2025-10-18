@@ -1,0 +1,24 @@
+{
+    "name": "com.mgs.capture",
+    "version": "1.0.0",
+    "displayName": "Capture",
+    "description": "Capture screenshot and camerashot.",
+    "unity": "2021.3",
+    "keywords": [
+        "capture",
+        "screenshot",
+        "camerashot"
+    ],
+    "author": {
+        "name": "Mogoson",
+        "email": "mogoson@outlook.com",
+        "url": "https://github.com/mogoson"
+    },
+    "samples": [
+        {
+            "displayName": "Sample",
+            "description": "Sample for capture screenshot and camerashot.",
+            "path": "Samples~/Sample"
+        }
+    ]
+}
