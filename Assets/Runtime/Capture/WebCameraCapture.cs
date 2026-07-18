@@ -23,8 +23,12 @@ namespace MGS.Capture
         public int requestedHeight = 1024;
         protected WebCamTexture camTexture;
 
-        public override bool IsCapturing { get { return camTexture != null; } }
         public override event Action<Texture> OnCaptureEvent;
+
+        public override bool IsCapturing
+        {
+            get { return camTexture != null && camTexture.isPlaying; }
+        }
 
         protected virtual void OnDestroy()
         {

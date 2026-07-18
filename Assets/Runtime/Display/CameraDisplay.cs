@@ -43,13 +43,19 @@ namespace MGS.Capture
         {
             capture.OnCaptureEvent -= OnCapture;
             capture.OnCaptureEvent += OnCapture;
-            capture.StartCapture();
+            if (!IsCapturing)
+            {
+                capture.StartCapture();
+            }
         }
 
         public void StopCapture()
         {
             capture.OnCaptureEvent -= OnCapture;
-            capture.StopCapture();
+            if (IsCapturing)
+            {
+                capture.StopCapture();
+            }
         }
 
         protected virtual void OnCapture(Texture texture)
