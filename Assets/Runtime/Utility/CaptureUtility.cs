@@ -10,13 +10,15 @@
  *  Description  :  Initial development version.
  *************************************************************************/
 
+using System;
+using MGS.IOUtility;
 using UnityEngine;
 
 namespace MGS.Capture
 {
-    public sealed class CaptureUtility
+    public static class CaptureUtility
     {
-        public static Texture2D CaptureScreenshot()
+        public static Texture2D Screenshot()
         {
             /*
             var screenshot = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
@@ -27,12 +29,7 @@ namespace MGS.Capture
             return ScreenCapture.CaptureScreenshotAsTexture();
         }
 
-        public static Texture2D CaptureScreenshot(int superSize)
-        {
-            return ScreenCapture.CaptureScreenshotAsTexture(superSize);
-        }
-
-        public static Texture2D CaptureCamerashot(Camera camera)
+        public static Texture2D Camerashot(Camera camera)
         {
             var renderTexture = new RenderTexture(Screen.width, Screen.height, 24);
             camera.targetTexture = renderTexture;
@@ -45,9 +42,24 @@ namespace MGS.Capture
 
             RenderTexture.active = null;
             camera.targetTexture = null;
-            Object.Destroy(renderTexture);
+            UnityEngine.Object.Destroy(renderTexture);
 
             return camerashot;
+        }
+
+        public static Exception Screenshot(string path)
+        {
+            return SaveAsPNG(Screenshot(), path);
+        }
+
+        public static Exception Camerashot(Camera camera, string path)
+        {
+            return SaveAsPNG(Camerashot(camera), path);
+        }
+
+        public static Exception SaveAsPNG(Texture2D texture, string path)
+        {
+            return FileUtility.WriteAllBytes(path, texture.EncodeToPNG());
         }
     }
 }

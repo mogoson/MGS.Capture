@@ -1,7 +1,9 @@
 {
     "name": "MGS.Capture",
-    "rootNamespace": "",
-    "references": [],
+    "rootNamespace": "MGS.Capture",
+    "references": [
+        "GUID:068fb68b18909ba40a172c72cb07338d"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

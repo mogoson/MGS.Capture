@@ -1,8 +1,9 @@
 {
     "name": "MGS.Capture.Sample",
-    "rootNamespace": "",
+    "rootNamespace": "MGS.Capture.Sample",
     "references": [
-        "MGS.Capture"
+        "GUID:514eea026ac535b45bebe25fe9988e0d",
+        "GUID:068fb68b18909ba40a172c72cb07338d"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

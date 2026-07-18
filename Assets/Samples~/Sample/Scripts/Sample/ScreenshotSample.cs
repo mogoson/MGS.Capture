@@ -1,7 +1,7 @@
 /*************************************************************************
  *  Copyright © 2025 Mogoson All rights reserved.
  *------------------------------------------------------------------------
- *  File         :  CaptureCamerashotSample.cs
+ *  File         :  ScreenshotSample.cs
  *  Description  :  Default.
  *------------------------------------------------------------------------
  *  Author       :  Mogoson
@@ -11,24 +11,23 @@
  *************************************************************************/
 
 using System.Collections;
-using System.IO;
+using MGS.IOUtility;
 using UnityEngine;
 
 namespace MGS.Capture.Sample
 {
-    public class CaptureCamerashotSample : MonoBehaviour
+    [AddComponentMenu("MGS/Capture/Sample/Screenshot Sample")]
+    public class ScreenshotSample : MonoBehaviour
     {
-        public Camera cam;
-
         private IEnumerator Start()
         {
             yield return new WaitForEndOfFrame();
 
-            var tex = CaptureUtility.CaptureCamerashot(cam);
+            var tex = CaptureUtility.Screenshot();
             var bytes = tex.EncodeToPNG();
 
-            var file = $"{Application.dataPath}/Camerashot.png";
-            File.WriteAllBytes(file, bytes);
+            var file = $"{Application.dataPath}/Screenshot.png";
+            FileUtility.WriteAllBytes(file, bytes);
             Debug.Log($"Capture is saved to {file}");
         }
     }
