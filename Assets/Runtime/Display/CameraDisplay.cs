@@ -1,7 +1,7 @@
 /*************************************************************************
  *  Copyright © 2026 Mogoson All rights reserved.
  *------------------------------------------------------------------------
- *  File         :  CameraMonitor.cs
+ *  File         :  CameraDisplay.cs
  *  Description  :  Default.
  *------------------------------------------------------------------------
  *  Author       :  Mogoson
@@ -15,9 +15,9 @@ using UnityEngine.UI;
 
 namespace MGS.Capture
 {
-    [AddComponentMenu("MGS/Capture/Camera Monitor")]
+    [AddComponentMenu("MGS/Capture/Camera Display")]
     [RequireComponent(typeof(RawImage))]
-    public class CameraMonitor : MonoBehaviour, ICameraMonitor
+    public class CameraDisplay : MonoBehaviour, ICameraDisplay
     {
         public RawImage image;
         public CameraCapture capture;

@@ -1,7 +1,7 @@
 /*************************************************************************
  *  Copyright © 2026 Mogoson All rights reserved.
  *------------------------------------------------------------------------
- *  File         :  ICameraMonitor.cs
+ *  File         :  ICameraDisplay.cs
  *  Description  :  Default.
  *------------------------------------------------------------------------
  *  Author       :  Mogoson
@@ -12,7 +12,7 @@
 
 namespace MGS.Capture
 {
-    public interface ICameraMonitor
+    public interface ICameraDisplay
     {
         bool IsCapturing { get; }
 

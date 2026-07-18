@@ -484,7 +484,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8031527677459078552, guid: 67489b85aaae28f4b8ab60fa7fe0f37b, type: 3}
       propertyPath: m_Name
-      value: CameraMonitor
+      value: CameraDisplay
       objectReference: {fileID: 0}
     - target: {fileID: 8031527677459078559, guid: 67489b85aaae28f4b8ab60fa7fe0f37b, type: 3}
       propertyPath: m_Pivot.x
