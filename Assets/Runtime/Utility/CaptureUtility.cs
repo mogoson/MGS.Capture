@@ -11,7 +11,7 @@
  *************************************************************************/
 
 using System;
-using MGS.IOUtility;
+using MGS.IO;
 using UnityEngine;
 
 namespace MGS.Capture

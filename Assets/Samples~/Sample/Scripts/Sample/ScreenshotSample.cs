@@ -11,7 +11,7 @@
  *************************************************************************/
 
 using System.Collections;
-using MGS.IOUtility;
+using MGS.IO;
 using UnityEngine;
 
 namespace MGS.Capture.Sample
